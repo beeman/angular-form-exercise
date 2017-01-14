@@ -9,15 +9,16 @@ import { Component } from '@angular/core';
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" [routerLink]="['/', 'forms']" routerLinkActive="active">Forms</a>
           </li>
         </ul>
       </div>
     </nav>
-    <router-outlet></router-outlet>
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
   </div>
   `,
-  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   title = 'Angular Form Exercise';
