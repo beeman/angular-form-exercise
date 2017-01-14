@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.component'
 import { TemplateFormComponent } from './forms/template-form/template-form.component';
 
 const routes: Routes = [
@@ -9,7 +10,8 @@ const routes: Routes = [
     path: 'forms',
     children: [
       { path: '', redirectTo: 'template', pathMatch: 'full' },
-      { path: 'template', component: TemplateFormComponent }
+      { path: 'reactive', component: ReactiveFormComponent },
+      { path: 'template', component: TemplateFormComponent },
     ]
   }
 ];

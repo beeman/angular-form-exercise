@@ -9,7 +9,14 @@ import { Component } from '@angular/core';
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/', 'forms']" routerLinkActive="active">Forms</a>
+            <a class="nav-link" [routerLink]="['/', 'forms', 'template']" routerLinkActive="active">
+              Template Forms
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/', 'forms', 'reactive']" routerLinkActive="active">
+              Reactive Forms
+            </a>
           </li>
         </ul>
       </div>

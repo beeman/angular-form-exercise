@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { User } from './signup.interface';
+import { User } from '../user.interface';
 
 @Component({
-  selector: 'app-signup-form',
+  selector: 'app-template-signup-form',
   template: `
     <form novalidate  (ngSubmit)="onSubmit(f)" #f="ngForm">
       <div class="form-group"
@@ -13,11 +13,11 @@ import { User } from './signup.interface';
         <input
           id="name" name="name"
           type="text" class="form-control"
-          #userName="ngModel" ngModel required autocomplete="off" autofocus minlength="2"
+          #userName="ngModel" ngModel required autocomplete="off" minlength="2"
           [ngClass]="{'form-control-danger': (
             ( userName.errors?.required || userName.errors?.minlength ) && userName.touched
           )}"
-          placeholder="Full name">
+          placeholder="Your full name">
         <div *ngIf="userName.errors?.required && userName.touched" class="form-control-feedback">
           Name is required
         </div>
@@ -64,7 +64,7 @@ import { User } from './signup.interface';
     </div>
   `
 })
-export class SignupFormComponent {
+export class TemplateSignupFormComponent {
 
   public user: User = {
     name: '',
